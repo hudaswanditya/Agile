@@ -3,11 +3,10 @@
   <div class="row">
       <% @documents.each do |document| %>
         <div class="col col-md-4">
-            <img src="http://via.placeholder.com/200x300">
+            <img src="<%= document.file %>">
             <h3><%= document.name %> </h3>
             <p>Start: <%= document.start_date %> </p>
             <p>Expired: <%= document.exp_date %> </p>
-            <p>Source: <%= document.file %> </p>
             <p>Document id: <%= document.id %></p>
             <br>
             <button type="button" class="btn btn-success"><%= link_to 'Show', document %></button>
