@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
+      <% @documents.each do |document| %>
+        <div class="col col-md-4">
+            <img src="http://via.placeholder.com/200x300">
+            <h3><%= document.name %> </h3>
+            <p>Start: <%= document.start_date %> </p>
+            <p>Expired: <%= document.exp_date %> </p>
+            <p>Source: <%= document.file %> </p>
+            <p>Document id: <%= document.id %></p>
+            <br>
+            <button type="button" class="btn btn-success"><%= link_to 'Show', document %></button>
+            <button type="button" class="btn btn-warning"><%= link_to 'Edit', edit_document_path(document) %></button>
+            <button type="button" class="btn btn-danger"><%= link_to 'Destroy', document, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+        </div>
+      <% end %>
+
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">
+    <div class="col col-md-12">
+      <h1>Editing Document</h1>
+
+      <%= render 'form', document: @document %>
+      <%= link_to 'Show', @document , :class => 'btn btn-primary'%>
+      <%= link_to 'Back', documents_path, :class => 'btn btn-warning' %>
+    </div>
+  </div>
+</div>
