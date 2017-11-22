@@ -1,24 +1,28 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
+    <div class="col col-md-6">
+      <p id="notice"><%= notice %></p>
+      <img src="<%= @document.file %>">
+    </div>
+    <div class="col col-md-6">
+      <p>
+        <strong>Name:</strong>
+        <%= @document.name %>
+      </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @document.name %>
-</p>
+      <p>
+        <strong>Start date:</strong>
+        <%= @document.start_date %>
+      </p>
 
-<p>
-  <strong>Start date:</strong>
-  <%= @document.start_date %>
-</p>
-
-<p>
-  <strong>Exp date:</strong>
-  <%= @document.exp_date %>
-</p>
-
-<p>
-  <strong>File:</strong>
-  <%= @document.file %>
-</p>
-
-<%= link_to 'Edit', edit_document_path(@document) %> |
-<%= link_to 'Back', documents_path %>
+      <p>
+        <strong>Exp date:</strong>
+        <%= @document.exp_date %>
+      </p>
+    </div>
+    <div class="col col-md-12">
+      <%= link_to 'Edit', edit_document_path(@document) %> |
+      <%= link_to 'Back', documents_path %>
+    </div>
+  </div>
+</div>

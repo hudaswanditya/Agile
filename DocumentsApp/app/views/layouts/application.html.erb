@@ -13,6 +13,8 @@
       <div class="row">
         <div class="col col-md-12 text-center">
           <h1>Personal Document App</h1>
+          <p class="notice"><%= notice %></p>
+          <p class="alert"><%= alert %></p>
         </div>
       </div>
     </div>
@@ -28,10 +30,8 @@
           <a href="/documents"> <h2>Tasks</h2></a>
         </div>
       </div>
-      <br>
-      <div class="col col-md-12">
-        <%= link_to '+ New Document', new_document_path %>
-      </div>
+
+
     </div>
     <%= yield %>
   </body>
