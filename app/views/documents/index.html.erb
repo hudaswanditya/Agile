@@ -1,8 +1,15 @@
 <p id="notice"><%= notice %></p>
 <div class="container">
-  <div class="row">
-
-      <div class="col col-md-12"><%= link_to '+ New Document', new_document_path, :class => 'btn btn-success' %></div>
+  <div class="row" style="margin-top:30px;">
+      <div class="col col-md-9"><%= link_to '+ New Document', new_document_path, :class => 'btn btn-success' %></div>
+      <div class="col col-md-3">
+        <%= form_tag(documents_path, method: :get) do %>
+          <%= text_field_tag :name, params[:name] %>
+          <%= submit_tag 'Search', name: nil %>
+        <% end %>
+      </div>
+    </div>
+    <div class="row" style="margin-top:30px;">
       <% @documents.each do |document| %>
         <div class="col col-md-4">
             <img src="<%= document.file %>">

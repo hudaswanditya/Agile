@@ -4,7 +4,11 @@ class DocumentsController < ApplicationController
   # GET /documents
   # GET /documents.json
   def index
-    @documents = Document.all
+    @documents = if params[:name]
+      Document.where('name LIKE ?', "%#{params[:name]}%")
+    else
+      Document.all
+    end
   end
 
   # GET /documents/1
