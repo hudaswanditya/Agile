@@ -1,0 +1,2475 @@
+Started GET "/" for 127.0.0.1 at 2017-11-02 11:50:54 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/hudaswanditya/.rvm/gems/ruby-2.4.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/hudaswanditya/.rvm/gems/ruby-2.4.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (4.9ms)
+Completed 200 OK in 280ms (Views: 12.6ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-02 11:57:10 +0100
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.4) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.4) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateDocuments (20171102105402)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "documents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "start_date" date, "exp_date" date, "file" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171102105402"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-11-02 10:57:23.390924"], ["updated_at", "2017-11-02 10:57:23.390924"]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/documents" for 127.0.0.1 at 2017-11-02 11:57:28 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 1100ms (Views: 1081.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/documents/new" for 127.0.0.1 at 2017-11-02 11:57:32 +0100
+Processing by DocumentsController#new as HTML
+  Rendering documents/new.html.erb within layouts/application
+  Rendered documents/_form.html.erb (25.6ms)
+  Rendered documents/new.html.erb within layouts/application (28.9ms)
+Completed 200 OK in 93ms (Views: 57.5ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/documents" for 127.0.0.1 at 2017-11-02 11:57:46 +0100
+Processing by DocumentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4ZOP5feonYaB0f+EK0woAWU+CnmTBoJTLgwikWiMFcLVJwclHhCAtsBtT1qVdasjFi/k88IUINzDBexv9kQOog==", "document"=>{"name"=>"Test", "start_date(1i)"=>"2017", "start_date(2i)"=>"11", "start_date(3i)"=>"2", "exp_date(1i)"=>"2017", "exp_date(2i)"=>"11", "exp_date(3i)"=>"2", "file"=>"/files/"}, "commit"=>"Create Document"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "documents" ("name", "start_date", "exp_date", "file", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Test"], ["start_date", "2017-11-02"], ["exp_date", "2017-11-02"], ["file", "/files/"], ["created_at", "2017-11-02 10:57:46.308343"], ["updated_at", "2017-11-02 10:57:46.308343"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/documents/1
+Completed 302 Found in 10ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/documents/1" for 127.0.0.1 at 2017-11-02 11:57:46 +0100
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDocument Load (0.6ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering documents/show.html.erb within layouts/application
+  Rendered documents/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 39ms (Views: 29.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-02 11:57:48 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 52ms (Views: 45.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-02 12:03:57 +0100
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.6ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 293ms (Views: 274.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-02 12:11:20 +0100
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.5ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (22.8ms)
+Completed 200 OK in 4089ms (Views: 4070.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-02 12:15:30 +0100
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.7ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 373ms (Views: 355.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-02 12:17:05 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.6ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 46ms (Views: 41.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-02 12:17:44 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 35ms (Views: 31.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-02 12:18:16 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 42ms (Views: 38.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-02 12:18:30 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 40ms (Views: 36.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-02 12:18:56 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 39ms (Views: 35.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-02 12:21:04 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (1.1ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 217ms (Views: 201.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-02 12:21:05 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 52ms (Views: 48.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-02 12:23:24 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 44ms (Views: 41.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-02 12:25:35 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (1.0ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 92ms (Views: 79.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-02 12:25:53 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 40ms (Views: 37.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-02 12:27:10 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 40ms (Views: 37.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-02 12:27:45 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 41ms (Views: 38.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-02 12:27:58 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 46ms (Views: 43.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/documents/new" for 127.0.0.1 at 2017-11-02 12:28:06 +0100
+Processing by DocumentsController#new as HTML
+  Rendering documents/new.html.erb within layouts/application
+  Rendered documents/_form.html.erb (51.8ms)
+  Rendered documents/new.html.erb within layouts/application (55.8ms)
+Completed 200 OK in 128ms (Views: 83.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/documents" for 127.0.0.1 at 2017-11-02 12:28:21 +0100
+Processing by DocumentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ag0BzWpNPb7OvqKoQDJGcA8SZxr4MKRHQ/JmzYdL9R1euYkNg/Ugjo8CEnb+C8VSfAOJkKkiBsiu+6gzGYPufQ==", "document"=>{"name"=>"Doc 2", "start_date(1i)"=>"2017", "start_date(2i)"=>"11", "start_date(3i)"=>"2", "exp_date(1i)"=>"2017", "exp_date(2i)"=>"11", "exp_date(3i)"=>"2", "file"=>"/usr/files/blabla"}, "commit"=>"Create Document"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "documents" ("name", "start_date", "exp_date", "file", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Doc 2"], ["start_date", "2017-11-02"], ["exp_date", "2017-11-02"], ["file", "/usr/files/blabla"], ["created_at", "2017-11-02 11:28:21.310188"], ["updated_at", "2017-11-02 11:28:21.310188"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/documents/2
+Completed 302 Found in 10ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/documents/2" for 127.0.0.1 at 2017-11-02 12:28:21 +0100
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering documents/show.html.erb within layouts/application
+  Rendered documents/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 32ms (Views: 24.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-02 12:28:24 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 43ms (Views: 37.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-02 12:29:43 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 38ms (Views: 35.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-02 12:29:53 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 28ms (Views: 25.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-02 12:32:12 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 43ms (Views: 39.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/documents/new" for 127.0.0.1 at 2017-11-02 14:03:28 +0100
+Processing by DocumentsController#new as HTML
+  Rendering documents/new.html.erb within layouts/application
+  Rendered documents/_form.html.erb (125.4ms)
+  Rendered documents/new.html.erb within layouts/application (132.8ms)
+Completed 200 OK in 242ms (Views: 230.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/documents/1/edit" for 127.0.0.1 at 2017-11-02 14:05:55 +0100
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDocument Load (1.7ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (22.5ms)
+  Rendered documents/edit.html.erb within layouts/application (29.3ms)
+Completed 200 OK in 124ms (Views: 101.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/documents/1/edit" for 127.0.0.1 at 2017-11-02 14:07:36 +0100
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (6.5ms)
+  Rendered documents/edit.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 59ms (Views: 56.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/documents/1/edit" for 127.0.0.1 at 2017-11-02 14:08:17 +0100
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (5.3ms)
+  Rendered documents/edit.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 40ms (Views: 36.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/documents/1/edit" for 127.0.0.1 at 2017-11-02 14:08:53 +0100
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDocument Load (0.1ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/edit.html.erb within layouts/application (342.1ms)
+Completed 500 Internal Server Error in 351ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `document' for #<#<Class:0x007f81c25e0e70>:0x007f81c6200a68>
+Did you mean?  @document):
+    1: <div class="container">
+    2:   <div class="row">
+    3:     <div class="col col-md-12">
+    4:       <h1><%= document.name %></h1>
+    5: 
+    6:       <%= render 'form', document: @document %>
+    7: 
+  
+app/views/documents/edit.html.erb:4:in `_app_views_documents_edit_html_erb__491735026883391094_70097675749920'
+Started GET "/documents/1/edit" for 127.0.0.1 at 2017-11-02 14:10:22 +0100
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDocument Load (0.8ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (16.0ms)
+  Rendered documents/edit.html.erb within layouts/application (23.5ms)
+Completed 200 OK in 109ms (Views: 93.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/documents/1/edit" for 127.0.0.1 at 2017-11-02 14:10:39 +0100
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (7.6ms)
+  Rendered documents/edit.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 62ms (Views: 58.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/documents/1/edit" for 127.0.0.1 at 2017-11-02 14:11:35 +0100
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDocument Load (0.1ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (5.9ms)
+  Rendered documents/edit.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 38ms (Views: 35.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-02 14:11:40 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 53ms (Views: 46.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/documents/1/edit" for 127.0.0.1 at 2017-11-02 14:11:42 +0100
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (18.8ms)
+  Rendered documents/edit.html.erb within layouts/application (23.9ms)
+Completed 200 OK in 72ms (Views: 65.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/documents/1/edit" for 127.0.0.1 at 2017-11-02 14:12:20 +0100
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (5.7ms)
+  Rendered documents/edit.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 47ms (Views: 44.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/documents/1/edit" for 127.0.0.1 at 2017-11-02 14:13:35 +0100
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDocument Load (0.8ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (3.4ms)
+  Rendered documents/edit.html.erb within layouts/application (10.6ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.8ms)
+
+
+  
+SyntaxError (/Users/hudaswanditya/Documents/last_semester/Agile/ruby/DocumentsApp/app/views/documents/_form.html.erb:35: syntax error, unexpected =>, expecting &. or :: or '[' or '.'
+ppend=( form.submit, :class => 'btn btn-success' );@output_b
+                              ^):
+  
+app/views/documents/_form.html.erb:35: syntax error, unexpected =>, expecting &. or :: or '[' or '.'
+app/views/documents/edit.html.erb:6:in `_app_views_documents_edit_html_erb__491735026883391094_70097685109520'
+Started GET "/documents/1/edit" for 127.0.0.1 at 2017-11-02 14:14:15 +0100
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (5.5ms)
+  Rendered documents/edit.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 58ms (Views: 54.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/documents/1/edit" for 127.0.0.1 at 2017-11-02 14:14:28 +0100
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (5.5ms)
+  Rendered documents/edit.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 50ms (Views: 47.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/documents/1/edit" for 127.0.0.1 at 2017-11-02 14:14:37 +0100
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDocument Load (0.1ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (5.2ms)
+  Rendered documents/edit.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 58ms (Views: 55.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-02 14:15:22 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 69ms (Views: 63.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/documents/1/edit" for 127.0.0.1 at 2017-11-02 14:16:35 +0100
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDocument Load (1.6ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (16.5ms)
+  Rendered documents/edit.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 111ms (Views: 91.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/documents/1/edit" for 127.0.0.1 at 2017-11-02 14:17:22 +0100
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (9.4ms)
+  Rendered documents/edit.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 57ms (Views: 52.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-02 14:17:28 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.7ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 52ms (Views: 45.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/documents/1/edit" for 127.0.0.1 at 2017-11-02 14:17:45 +0100
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (5.4ms)
+  Rendered documents/edit.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 48ms (Views: 45.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/documents/1/edit" for 127.0.0.1 at 2017-11-02 14:18:15 +0100
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (7.8ms)
+  Rendered documents/edit.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 46ms (Views: 42.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-02 14:18:22 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 74ms (Views: 68.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/documents/1" for 127.0.0.1 at 2017-11-02 14:18:27 +0100
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering documents/show.html.erb within layouts/application
+  Rendered documents/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 45ms (Views: 38.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-02 14:18:28 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 55ms (Views: 49.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/documents/1" for 127.0.0.1 at 2017-11-02 14:18:31 +0100
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDocument Load (2.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering documents/show.html.erb within layouts/application
+  Rendered documents/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 47ms (Views: 40.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-02 14:18:32 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.8ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 53ms (Views: 46.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/documents/new" for 127.0.0.1 at 2017-11-02 14:19:24 +0100
+Processing by DocumentsController#new as HTML
+  Rendering documents/new.html.erb within layouts/application
+  Rendered documents/_form.html.erb (8.8ms)
+  Rendered documents/new.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 63ms (Views: 57.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-02 14:19:29 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 54ms (Views: 50.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-02 14:20:22 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.6ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 95ms (Views: 91.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/documents/1/edit" for 127.0.0.1 at 2017-11-02 14:20:25 +0100
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (10.8ms)
+  Rendered documents/edit.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 50ms (Views: 46.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-02 17:49:09 +0100
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.6ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (20.7ms)
+Completed 200 OK in 340ms (Views: 314.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-02 17:49:15 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.7ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 43ms (Views: 36.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-02 17:49:16 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 42ms (Views: 38.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-06 18:56:14 +0100
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.5ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 372ms (Views: 349.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-06 18:56:18 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.5ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 94ms (Views: 84.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-06 18:56:20 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 85ms (Views: 80.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/documents/2/edit" for 127.0.0.1 at 2017-11-06 18:59:58 +0100
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDocument Load (1.4ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (121.9ms)
+  Rendered documents/edit.html.erb within layouts/application (184.0ms)
+Completed 200 OK in 299ms (Views: 244.3ms | ActiveRecord: 1.4ms)
+
+
+Started DELETE "/documents/1" for 127.0.0.1 at 2017-11-06 19:16:18 +0100
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DocumentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"dwCfBzYL+eXj5pYYtem4E01Rn6pwisY61yuDeO+nAhNwWltZptKZBwwCOQ2XO347um2QygQDL3cQhYmvnoDqLw==", "id"=>"1"}
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant Document::AttachmentUploader):
+  
+app/models/document.rb:2:in `<class:Document>'
+app/models/document.rb:1:in `<top (required)>'
+app/controllers/documents_controller.rb:67:in `set_document'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started DELETE "/documents/1" for 127.0.0.1 at 2017-11-06 19:16:46 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DocumentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"dwCfBzYL+eXj5pYYtem4E01Rn6pwisY61yuDeO+nAhNwWltZptKZBwwCOQ2XO347um2QygQDL3cQhYmvnoDqLw==", "id"=>"1"}
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant Document::AttachmentUploader):
+  
+app/models/document.rb:2:in `<class:Document>'
+app/models/document.rb:1:in `<top (required)>'
+app/controllers/documents_controller.rb:67:in `set_document'
+Started GET "/documents/new" for 127.0.0.1 at 2017-11-06 19:16:53 +0100
+Processing by DocumentsController#new as HTML
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant Document::AttachmentUploader):
+  
+app/models/document.rb:2:in `<class:Document>'
+app/models/document.rb:1:in `<top (required)>'
+app/controllers/documents_controller.rb:17:in `new'
+Started GET "/documents" for 127.0.0.1 at 2017-11-06 19:17:41 +0100
+Processing by DocumentsController#index as HTML
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant Document::AttachmentUploader):
+  
+app/models/document.rb:2:in `<class:Document>'
+app/models/document.rb:1:in `<top (required)>'
+app/controllers/documents_controller.rb:7:in `index'
+Started GET "/documents" for 127.0.0.1 at 2017-11-06 19:17:43 +0100
+Processing by DocumentsController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant Document::AttachmentUploader):
+  
+app/models/document.rb:2:in `<class:Document>'
+app/models/document.rb:1:in `<top (required)>'
+app/controllers/documents_controller.rb:7:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/documents" for 127.0.0.1 at 2017-11-06 19:18:10 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DocumentsController#index as HTML
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant Document::AttachmentUploader):
+  
+app/models/document.rb:2:in `<class:Document>'
+app/models/document.rb:1:in `<top (required)>'
+app/controllers/documents_controller.rb:7:in `index'
+Started GET "/documents" for 127.0.0.1 at 2017-11-06 19:18:12 +0100
+Processing by DocumentsController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant Document::AttachmentUploader):
+  
+app/models/document.rb:2:in `<class:Document>'
+app/models/document.rb:1:in `<top (required)>'
+app/controllers/documents_controller.rb:7:in `index'
+Started GET "/documents" for 127.0.0.1 at 2017-11-06 19:18:14 +0100
+Processing by DocumentsController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant Document::AttachmentUploader):
+  
+app/models/document.rb:2:in `<class:Document>'
+app/models/document.rb:1:in `<top (required)>'
+app/controllers/documents_controller.rb:7:in `index'
+Started GET "/documents" for 127.0.0.1 at 2017-11-06 19:18:31 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.6ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 348ms (Views: 338.8ms | ActiveRecord: 1.7ms)
+
+
+Started DELETE "/documents/1" for 127.0.0.1 at 2017-11-06 19:18:38 +0100
+Processing by DocumentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"t5uWG5OZ6v1/am1MLaTfg0uMuPTjcvAhc3KbpwzolAGwwVJFA0CKH5COwlkPdhmrvLC3lJf7GWy03JFwfc98PQ==", "id"=>"1"}
+  [1m[36mDocument Load (0.8ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[31mDELETE FROM "documents" WHERE "documents"."id" = ?[0m  [["id", 1]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/documents
+Completed 302 Found in 11ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-06 19:18:38 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 48ms (Views: 45.0ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/documents/2" for 127.0.0.1 at 2017-11-06 19:18:42 +0100
+Processing by DocumentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"byFluqmYml9BcQOK2RKR9BE62K6N0Jo2B1e037XkzOFoe6HkOUH6va6VrJ/7wFfc5gbXzvlZc3vA+b4IxMMk3Q==", "id"=>"2"}
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "documents" WHERE "documents"."id" = ?[0m  [["id", 2]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/documents
+Completed 302 Found in 6ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-06 19:18:42 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 38ms (Views: 35.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-06 19:19:07 +0100
+Processing by DocumentsController#index as HTML
+Completed 500 Internal Server Error in 9ms
+
+
+  
+NameError (uninitialized constant Document::AttachmentUploader):
+  
+app/models/document.rb:2:in `<class:Document>'
+app/models/document.rb:1:in `<top (required)>'
+app/controllers/documents_controller.rb:7:in `index'
+Started GET "/documents" for 127.0.0.1 at 2017-11-06 19:22:33 +0100
+Processing by DocumentsController#index as HTML
+Completed 500 Internal Server Error in 30ms
+
+
+  
+NameError (uninitialized constant Document::AttachmentUploader):
+  
+app/models/document.rb:2:in `<class:Document>'
+app/models/document.rb:1:in `<top (required)>'
+app/controllers/documents_controller.rb:7:in `index'
+Started GET "/documents" for 127.0.0.1 at 2017-11-06 19:29:28 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (1.0ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 115ms (Views: 91.4ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/documents/new" for 127.0.0.1 at 2017-11-06 19:29:31 +0100
+Processing by DocumentsController#new as HTML
+  Rendering documents/new.html.erb within layouts/application
+  Rendered documents/_form.html.erb (67.8ms)
+  Rendered documents/new.html.erb within layouts/application (71.1ms)
+Completed 200 OK in 148ms (Views: 115.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/documents/new" for 127.0.0.1 at 2017-11-06 19:31:11 +0100
+Processing by DocumentsController#new as HTML
+  Rendering documents/new.html.erb within layouts/application
+  Rendered documents/_form.html.erb (28.2ms)
+  Rendered documents/new.html.erb within layouts/application (37.1ms)
+Completed 200 OK in 124ms (Views: 102.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/documents" for 127.0.0.1 at 2017-11-06 19:31:36 +0100
+Processing by DocumentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"41XFnxWcCBU9TZLFPNWUQ4nXrVVoxi7xek+btOWufZrkDwHBhUVo99KpPdAeB1JrfuuiNRxPx7y94ZFjlImVpg==", "document"=>{"name"=>"Test File", "start_date(1i)"=>"2017", "start_date(2i)"=>"11", "start_date(3i)"=>"6", "exp_date(1i)"=>"2017", "exp_date(2i)"=>"11", "exp_date(3i)"=>"6", "file"=>#<ActionDispatch::Http::UploadedFile:0x007ff4b62b4bb8 @tempfile=#<Tempfile:/var/folders/6q/13dpqcmj6y97jfv06kppz8h40000gn/T/RackMultipart20171106-20755-2rum7h.png>, @original_filename="Screen Shot 2017-10-24 at 14.41.40.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"document[file]\"; filename=\"Screen Shot 2017-10-24 at 14.41.40.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Create Document"}
+  [1m[35m (1.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.3ms)[0m  [1m[32mINSERT INTO "documents" ("name", "start_date", "exp_date", "file", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Test File"], ["start_date", "2017-11-06"], ["exp_date", "2017-11-06"], ["file", "Screen_Shot_2017-10-24_at_14.41.40.png"], ["created_at", "2017-11-06 18:31:36.539154"], ["updated_at", "2017-11-06 18:31:36.539154"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/documents/3
+Completed 302 Found in 107ms (ActiveRecord: 4.9ms)
+
+
+Started GET "/documents/3" for 127.0.0.1 at 2017-11-06 19:31:36 +0100
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering documents/show.html.erb within layouts/application
+  Rendered documents/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 82ms (Views: 68.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-06 19:31:43 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 69ms (Views: 63.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-06 19:32:22 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (1.8ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 174ms (Views: 154.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/documents/3" for 127.0.0.1 at 2017-11-06 19:32:25 +0100
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDocument Load (0.5ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering documents/show.html.erb within layouts/application
+  Rendered documents/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 74ms (Views: 62.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-06 19:33:43 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (1.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 2139ms (Views: 2127.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/documents/3/edit" for 127.0.0.1 at 2017-11-06 19:35:19 +0100
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDocument Load (2.1ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (29.5ms)
+  Rendered documents/edit.html.erb within layouts/application (36.9ms)
+Completed 200 OK in 143ms (Views: 120.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/documents/3" for 127.0.0.1 at 2017-11-06 19:35:28 +0100
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDocument Load (2.6ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering documents/show.html.erb within layouts/application
+  Rendered documents/show.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 75ms (Views: 63.9ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-06 19:35:30 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.5ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 105ms (Views: 87.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-06 19:35:32 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 67ms (Views: 61.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/documents/3/edit" for 127.0.0.1 at 2017-11-06 19:35:35 +0100
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDocument Load (0.5ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (13.8ms)
+  Rendered documents/edit.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 83ms (Views: 73.6ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/documents/3" for 127.0.0.1 at 2017-11-06 19:35:44 +0100
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xfuAAzXad+aQ0iUfNUCwjaH1Ohq3MbpYPqVPBGr1eLBH0znaLtyFag2cUFpEqsaYGlJXBPYm7QBjnEUe9NNlVw==", "document"=>{"name"=>"Test File", "start_date(1i)"=>"2017", "start_date(2i)"=>"11", "start_date(3i)"=>"6", "exp_date(1i)"=>"2017", "exp_date(2i)"=>"11", "exp_date(3i)"=>"6", "file"=>#<ActionDispatch::Http::UploadedFile:0x007ff4b79a41c0 @tempfile=#<Tempfile:/var/folders/6q/13dpqcmj6y97jfv06kppz8h40000gn/T/RackMultipart20171106-20755-wdwsz7.jpg>, @original_filename="passport U.S..jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"document[file]\"; filename=\"passport U.S..jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Update Document", "id"=>"3"}
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "documents" SET "file" = ?, "updated_at" = ? WHERE "documents"."id" = ?[0m  [["file", "passport_U.S..jpg"], ["updated_at", "2017-11-06 18:35:44.132905"], ["id", 3]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/documents/3
+Completed 302 Found in 39ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/documents/3" for 127.0.0.1 at 2017-11-06 19:35:44 +0100
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDocument Load (0.1ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering documents/show.html.erb within layouts/application
+  Rendered documents/show.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 49ms (Views: 46.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-06 19:35:53 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 54ms (Views: 46.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-06 19:36:40 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (1.0ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 2123ms (Views: 2109.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-06 19:37:05 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (1.0ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 2024ms (Views: 2008.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-06 19:37:34 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 1787ms (Views: 1783.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-06 19:37:49 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 1773ms (Views: 1768.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/documents/new" for 127.0.0.1 at 2017-11-06 19:54:07 +0100
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DocumentsController#new as HTML
+  Rendering documents/new.html.erb within layouts/application
+  Rendered documents/_form.html.erb (26.6ms)
+  Rendered documents/new.html.erb within layouts/application (31.5ms)
+Completed 200 OK in 430ms (Views: 404.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/documents/new" for 127.0.0.1 at 2017-11-06 19:55:20 +0100
+Processing by DocumentsController#new as HTML
+  Rendering documents/new.html.erb within layouts/application
+  Rendered documents/_form.html.erb (22.7ms)
+  Rendered documents/new.html.erb within layouts/application (28.7ms)
+Completed 200 OK in 102ms (Views: 89.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/documents/new" for 127.0.0.1 at 2017-11-06 19:55:23 +0100
+Processing by DocumentsController#new as HTML
+  Rendering documents/new.html.erb within layouts/application
+  Rendered documents/_form.html.erb (4.8ms)
+  Rendered documents/new.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 44ms (Views: 42.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/documents/new" for 127.0.0.1 at 2017-11-06 19:55:36 +0100
+Processing by DocumentsController#new as HTML
+  Rendering documents/new.html.erb within layouts/application
+  Rendered documents/_form.html.erb (6.8ms)
+  Rendered documents/new.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 50ms (Views: 46.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/documents/new" for 127.0.0.1 at 2017-11-06 19:55:58 +0100
+Processing by DocumentsController#new as HTML
+  Rendering documents/new.html.erb within layouts/application
+  Rendered documents/_form.html.erb (20.0ms)
+  Rendered documents/new.html.erb within layouts/application (30.5ms)
+Completed 200 OK in 117ms (Views: 99.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-06 19:56:01 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (1.6ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (31.4ms)
+Completed 200 OK in 82ms (Views: 71.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-06 19:58:43 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (2.1ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (23.1ms)
+Completed 200 OK in 95ms (Views: 82.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-06 19:58:51 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.6ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 105ms (Views: 100.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-06 19:59:43 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (1.4ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (24.4ms)
+Completed 200 OK in 2133ms (Views: 2122.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-06 19:59:53 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (1.6ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (28.5ms)
+Completed 200 OK in 2133ms (Views: 2119.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-06 20:00:07 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (1.0ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 1743ms (Views: 1739.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/documents/3/edit" for 127.0.0.1 at 2017-11-06 20:00:20 +0100
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDocument Load (0.8ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (9.7ms)
+  Rendered documents/edit.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 94ms (Views: 81.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-06 20:00:25 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 80ms (Views: 74.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-06 20:00:54 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (1.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 151ms (Views: 136.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/documents/new" for 127.0.0.1 at 2017-11-06 20:01:21 +0100
+Processing by DocumentsController#new as HTML
+  Rendering documents/new.html.erb within layouts/application
+  Rendered documents/_form.html.erb (93.8ms)
+  Rendered documents/new.html.erb within layouts/application (117.0ms)
+Completed 200 OK in 384ms (Views: 357.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/documents/new" for 127.0.0.1 at 2017-11-06 20:01:51 +0100
+Processing by DocumentsController#new as HTML
+  Rendering documents/new.html.erb within layouts/application
+  Rendered documents/_form.html.erb (44.3ms)
+  Rendered documents/new.html.erb within layouts/application (73.0ms)
+Completed 200 OK in 262ms (Views: 248.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-06 20:01:59 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (1.4ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 98ms (Views: 80.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-06 20:02:33 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (1.8ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (23.6ms)
+Completed 200 OK in 2118ms (Views: 2104.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-06 20:03:13 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (1.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (35.3ms)
+Completed 200 OK in 186ms (Views: 169.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-06 20:03:19 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.7ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 76ms (Views: 72.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-06 20:03:20 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 103ms (Views: 97.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/documents/3/edit" for 127.0.0.1 at 2017-11-06 20:03:23 +0100
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDocument Load (0.5ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (14.9ms)
+  Rendered documents/edit.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 66ms (Views: 59.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-06 20:03:24 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (1.1ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 154ms (Views: 148.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/documents/3" for 127.0.0.1 at 2017-11-06 20:03:26 +0100
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering documents/show.html.erb within layouts/application
+  Rendered documents/show.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 71ms (Views: 62.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/documents/3" for 127.0.0.1 at 2017-11-06 20:04:14 +0100
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDocument Load (3.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering documents/show.html.erb within layouts/application
+  Rendered documents/show.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 123ms (Views: 99.9ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/documents/3" for 127.0.0.1 at 2017-11-06 20:04:58 +0100
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering documents/show.html.erb within layouts/application
+  Rendered documents/show.html.erb within layouts/application (486.8ms)
+Completed 500 Internal Server Error in 497ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `document' for #<#<Class:0x007ffd239a14b0>:0x007ffd25f9a3b0>
+Did you mean?  @document):
+    2:   <div class="row">
+    3:     <div class="col col-md-12">
+    4:       <p id="notice"><%= notice %></p>
+    5:       <img src="<%= document.file %>">
+    6:       <p>
+    7:         <strong>Name:</strong>
+    8:         <%= @document.name %>
+  
+app/views/documents/show.html.erb:5:in `_app_views_documents_show_html_erb__4347773484764910609_70362620286820'
+Started GET "/documents/3" for 127.0.0.1 at 2017-11-06 20:05:12 +0100
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDocument Load (0.5ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering documents/show.html.erb within layouts/application
+  Rendered documents/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 52ms (Views: 47.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/documents/3" for 127.0.0.1 at 2017-11-06 20:05:53 +0100
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDocument Load (1.5ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering documents/show.html.erb within layouts/application
+  Rendered documents/show.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 95ms (Views: 76.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-06 20:06:05 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (2.8ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 74ms (Views: 64.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/documents/new" for 127.0.0.1 at 2017-11-06 20:07:04 +0100
+Processing by DocumentsController#new as HTML
+  Rendering documents/new.html.erb within layouts/application
+  Rendered documents/_form.html.erb (28.9ms)
+  Rendered documents/new.html.erb within layouts/application (37.1ms)
+Completed 200 OK in 161ms (Views: 119.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-06 20:07:06 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (2.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 85ms (Views: 78.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/documents/3/edit" for 127.0.0.1 at 2017-11-06 20:12:00 +0100
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDocument Load (2.1ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (23.7ms)
+  Rendered documents/edit.html.erb within layouts/application (38.7ms)
+Completed 200 OK in 178ms (Views: 146.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-06 20:12:02 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.7ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 77ms (Views: 71.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/documents/3/edit" for 127.0.0.1 at 2017-11-06 20:12:06 +0100
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDocument Load (0.8ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (8.4ms)
+  Rendered documents/edit.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 106ms (Views: 97.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-06 20:12:10 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.7ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 110ms (Views: 100.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-06 20:18:59 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (4.1ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (71.8ms)
+Completed 200 OK in 248ms (Views: 219.2ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-06 20:19:00 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 67ms (Views: 63.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-14 16:21:23 +0100
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.4) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.4) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTasks (20171113135417)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "text" varchar, "done" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171113135417"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2017-11-14 16:21:47 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.5ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 2164ms (Views: 2143.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-14 16:21:52 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.8ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 48ms (Views: 42.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-14 16:21:54 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 50ms (Views: 45.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-14 16:21:55 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 86ms (Views: 79.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-14 16:21:56 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 89ms (Views: 86.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/documents/new" for 127.0.0.1 at 2017-11-14 16:21:58 +0100
+Processing by DocumentsController#new as HTML
+  Rendering documents/new.html.erb within layouts/application
+  Rendered documents/_form.html.erb (39.5ms)
+  Rendered documents/new.html.erb within layouts/application (44.2ms)
+Completed 200 OK in 96ms (Views: 91.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-14 16:22:00 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 57ms (Views: 52.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/documents/3" for 127.0.0.1 at 2017-11-14 16:22:04 +0100
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering documents/show.html.erb within layouts/application
+  Rendered documents/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 102ms (Views: 90.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-14 16:22:08 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 58ms (Views: 52.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/documents/3/edit" for 127.0.0.1 at 2017-11-14 16:22:09 +0100
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (7.3ms)
+  Rendered documents/edit.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 48ms (Views: 43.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-14 16:22:19 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 63ms (Views: 58.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/documents/new" for 127.0.0.1 at 2017-11-14 16:22:24 +0100
+Processing by DocumentsController#new as HTML
+  Rendering documents/new.html.erb within layouts/application
+  Rendered documents/_form.html.erb (9.0ms)
+  Rendered documents/new.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 61ms (Views: 57.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/documents" for 127.0.0.1 at 2017-11-14 16:23:16 +0100
+Processing by DocumentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Jqw5OEVnTO5SOVRYiqwduDzkRToXpuNPPXSkBVUq4+rlfVyCoqPW1LLB9lztWtss1bOD1Mrrg6vAg6wKE/yduw==", "document"=>{"name"=>"2nd Document", "start_date(1i)"=>"2016", "start_date(2i)"=>"11", "start_date(3i)"=>"14", "exp_date(1i)"=>"2018", "exp_date(2i)"=>"11", "exp_date(3i)"=>"14", "file"=>#<ActionDispatch::Http::UploadedFile:0x007ffc90f1e688 @tempfile=#<Tempfile:/var/folders/6q/13dpqcmj6y97jfv06kppz8h40000gn/T/RackMultipart20171114-4652-1mpdb0p.png>, @original_filename="tech_support_cheat_sheet.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"document[file]\"; filename=\"tech_support_cheat_sheet.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Create Document"}
+  [1m[35m (0.8ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "documents" ("name", "start_date", "exp_date", "file", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "2nd Document"], ["start_date", "2016-11-14"], ["exp_date", "2018-11-14"], ["file", "tech_support_cheat_sheet.png"], ["created_at", "2017-11-14 15:23:16.795336"], ["updated_at", "2017-11-14 15:23:16.795336"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/documents/4
+Completed 302 Found in 55ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/documents/4" for 127.0.0.1 at 2017-11-14 16:23:16 +0100
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering documents/show.html.erb within layouts/application
+  Rendered documents/show.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 104ms (Views: 93.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-14 16:23:19 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 58ms (Views: 52.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-14 16:23:56 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 71ms (Views: 67.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-14 16:23:56 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 80ms (Views: 75.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-14 16:23:56 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 61ms (Views: 56.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-14 16:23:56 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 68ms (Views: 62.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-14 16:24:00 +0100
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 61ms (Views: 57.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/task" for 127.0.0.1 at 2017-11-14 16:24:08 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/task"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/tasks" for 127.0.0.1 at 2017-11-14 16:24:10 +0100
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 51ms (Views: 44.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-11-14 16:24:15 +0100
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (7.2ms)
+  Rendered tasks/new.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 66ms (Views: 49.7ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2017-11-14 16:24:30 +0100
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eG9CEMhAb0+MbTchCaClCGg45fzBfh0kRUJqYbzqQnxStdrMYL1H/KEee8MjZZuBnBv15XvNp5kZkj2M9yzu4Q==", "task"=>{"title"=>"jkldsf", "text"=>"skdfnk", "done"=>"1"}, "commit"=>"Create Task"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "text", "done", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "jkldsf"], ["text", "skdfnk"], ["done", "t"], ["created_at", "2017-11-14 15:24:30.898454"], ["updated_at", "2017-11-14 15:24:30.898454"]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks/1
+Completed 302 Found in 10ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2017-11-14 16:24:30 +0100
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 45ms (Views: 40.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-11-14 16:24:33 +0100
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 45ms (Views: 40.6ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/tasks/1" for 127.0.0.1 at 2017-11-14 16:24:38 +0100
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Gz9TxFge4d+VAsok3fqd0V5Y0QtlBVrFHsFaC2jJooSCmgc0hmOcHv8k/STNvOuysupes3MTZoiIfeUzIownzw==", "id"=>"1"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 7ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-11-14 16:24:38 +0100
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 43ms (Views: 39.0ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20171122202931)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171122202931"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started GET "/" for 127.0.0.1 at 2017-11-22 21:30:07 +0100
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.6ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 540ms (Views: 519.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-22 21:34:31 +0100
+Processing by DocumentsController#index as HTML
+Completed 401 Unauthorized in 21ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-22 21:34:31 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/hudaswanditya/.rvm/gems/ruby-2.4.1/gems/devise-4.3.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/hudaswanditya/.rvm/gems/ruby-2.4.1/gems/devise-4.3.0/app/views/devise/shared/_links.html.erb (3.5ms)
+  Rendered /Users/hudaswanditya/.rvm/gems/ruby-2.4.1/gems/devise-4.3.0/app/views/devise/sessions/new.html.erb within layouts/application (42.3ms)
+Completed 200 OK in 180ms (Views: 141.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-22 21:34:37 +0100
+Processing by DocumentsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-22 21:34:37 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/hudaswanditya/.rvm/gems/ruby-2.4.1/gems/devise-4.3.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/hudaswanditya/.rvm/gems/ruby-2.4.1/gems/devise-4.3.0/app/views/devise/shared/_links.html.erb (25.6ms)
+  Rendered /Users/hudaswanditya/.rvm/gems/ruby-2.4.1/gems/devise-4.3.0/app/views/devise/sessions/new.html.erb within layouts/application (41.5ms)
+Completed 200 OK in 112ms (Views: 108.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-22 21:34:38 +0100
+Processing by DocumentsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-22 21:34:38 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/hudaswanditya/.rvm/gems/ruby-2.4.1/gems/devise-4.3.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/hudaswanditya/.rvm/gems/ruby-2.4.1/gems/devise-4.3.0/app/views/devise/shared/_links.html.erb (1.4ms)
+  Rendered /Users/hudaswanditya/.rvm/gems/ruby-2.4.1/gems/devise-4.3.0/app/views/devise/sessions/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 70ms (Views: 67.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-11-22 21:35:01 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /Users/hudaswanditya/.rvm/gems/ruby-2.4.1/gems/devise-4.3.0/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /Users/hudaswanditya/.rvm/gems/ruby-2.4.1/gems/devise-4.3.0/app/views/devise/shared/_links.html.erb (4.0ms)
+  Rendered /Users/hudaswanditya/.rvm/gems/ruby-2.4.1/gems/devise-4.3.0/app/views/devise/registrations/new.html.erb within layouts/application (31.1ms)
+Completed 200 OK in 135ms (Views: 114.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-22 21:38:21 +0100
+Processing by DocumentsController#index as HTML
+Completed 401 Unauthorized in 8ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-22 21:38:21 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/hudaswanditya/.rvm/gems/ruby-2.4.1/gems/devise-4.3.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/hudaswanditya/.rvm/gems/ruby-2.4.1/gems/devise-4.3.0/app/views/devise/shared/_links.html.erb (1.6ms)
+  Rendered /Users/hudaswanditya/.rvm/gems/ruby-2.4.1/gems/devise-4.3.0/app/views/devise/sessions/new.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 116ms (Views: 75.5ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-11-23 11:18:46 +0100
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (2.6ms)
+  Rendered users/registrations/new.html.erb within layouts/application (143.1ms)
+Completed 200 OK in 1140ms (Views: 1067.2ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-11-23 11:19:07 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8QjLpf2UKfib8PRfUJKEVhuNsucVFCyNi+F5Jcb3heBw0wK2Cw2Bk4jeaKAI6FYgUvBK1OgE+0KmK/lNZ9QPKg==", "user"=>{"email"=>"huda.swanditya@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (3.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "huda.swanditya@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (54.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "huda.swanditya@gmail.com"], ["encrypted_password", "$2a$11$a0wsr8ssbiNVQmNPa8DZVe21lEWAgVuceM4mW1lBIll/4Vjtp2wKO"], ["created_at", "2017-11-23 10:19:07.987305"], ["updated_at", "2017-11-23 10:19:07.987305"]]
+  [1m[35m (41.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (8.7ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", "2017-11-23 10:19:08.100779"], ["last_sign_in_at", "2017-11-23 10:19:08.100779"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["updated_at", "2017-11-23 10:19:08.102126"], ["id", 1]]
+  [1m[35m (97.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/documents
+Completed 302 Found in 1173ms (ActiveRecord: 205.9ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-23 11:19:08 +0100
+Processing by DocumentsController#index as HTML
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.5ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (32.9ms)
+Completed 200 OK in 697ms (Views: 290.1ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-23 11:19:28 +0100
+Processing by DocumentsController#index as HTML
+  [1m[36mUser Load (9.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.5ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (67.0ms)
+Completed 200 OK in 424ms (Views: 338.0ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-23 11:19:31 +0100
+Processing by DocumentsController#index as HTML
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.7ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 247ms (Views: 200.8ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-23 11:19:32 +0100
+Processing by DocumentsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.6ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 325ms (Views: 316.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/documents/3" for 127.0.0.1 at 2017-11-23 11:19:38 +0100
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (10.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDocument Load (0.8ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering documents/show.html.erb within layouts/application
+  Rendered documents/show.html.erb within layouts/application (34.9ms)
+Completed 200 OK in 321ms (Views: 190.4ms | ActiveRecord: 11.3ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-23 11:19:41 +0100
+Processing by DocumentsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (23.2ms)
+Completed 200 OK in 250ms (Views: 241.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/documents/3/edit" for 127.0.0.1 at 2017-11-23 11:19:49 +0100
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDocument Load (0.9ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (110.6ms)
+  Rendered documents/edit.html.erb within layouts/application (166.0ms)
+Completed 200 OK in 447ms (Views: 312.9ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-23 11:19:52 +0100
+Processing by DocumentsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.5ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 103ms (Views: 90.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/documents/new" for 127.0.0.1 at 2017-11-23 11:19:53 +0100
+Processing by DocumentsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering documents/new.html.erb within layouts/application
+  Rendered documents/_form.html.erb (48.0ms)
+  Rendered documents/new.html.erb within layouts/application (60.9ms)
+Completed 200 OK in 233ms (Views: 217.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-23 11:24:27 +0100
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 76ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-23 11:24:27 +0100
+Processing by DocumentsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.9ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (32.1ms)
+Completed 200 OK in 214ms (Views: 192.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-23 11:24:32 +0100
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 9ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-23 11:24:33 +0100
+Processing by DocumentsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.6ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 194ms (Views: 186.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-23 11:33:04 +0100
+Processing by DocumentsController#index as HTML
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/documents" for 127.0.0.1 at 2017-11-23 11:33:04 +0100
+Processing by DocumentsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.7ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (37.0ms)
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (31.7ms)
+Completed 200 OK in 276ms (Views: 220.5ms | ActiveRecord: 4.1ms)
+
+
+Completed 200 OK in 211ms (Views: 174.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-23 11:36:10 +0100
+Processing by DocumentsController#index as HTML
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.9ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (36.4ms)
+Completed 200 OK in 194ms (Views: 139.8ms | ActiveRecord: 3.8ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-11-23 11:36:12 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"54lF8pIVZ/c8S6Ihulu4NTMqo+YvpZF4GBVaX6mijMVmUozhZIzPnC9lPt7iIWpDeldb1dK1Rrc139o3CIEGDw=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 25ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-23 11:36:12 +0100
+Processing by DocumentsController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-23 11:36:12 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (2.5ms)
+  Rendered users/sessions/new.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 79ms (Views: 76.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-23 11:36:19 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (5.6ms)
+  Rendered users/sessions/new.html.erb within layouts/application (27.2ms)
+Completed 200 OK in 159ms (Views: 138.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-11-23 11:36:43 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+bfX+24Q4TvtQvW7d+SDvGYFlWa9V2C0tEUM/6MwQeHpoNBiGf2fBRcdYCO2u1Eq0ey4guf6a0bigVNq9ejGFw==", "user"=>{"email"=>"huda.swanditya@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "huda.swanditya@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.2ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2017-11-23 10:36:44.167777"], ["sign_in_count", 2], ["updated_at", "2017-11-23 10:36:44.175922"], ["id", 1]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 293ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-23 11:36:44 +0100
+Processing by DocumentsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (5.5ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (30.6ms)
+Completed 200 OK in 466ms (Views: 450.4ms | ActiveRecord: 6.1ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-11-23 11:38:39 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"kxMNXJLCX593MsTSBw8B1CcQHpaZAdN9tZQq8tsQb2mIxfAN1tBhlNqOgQQB5Zc2DqcoIB4oK++6yjjA3ISA0w=="}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 64ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-23 11:38:39 +0100
+Processing by DocumentsController#index as HTML
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-23 11:38:39 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (10.1ms)
+  Rendered users/sessions/new.html.erb within layouts/application (28.2ms)
+Completed 200 OK in 176ms (Views: 171.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-11-23 11:39:17 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (4.1ms)
+  Rendered users/registrations/new.html.erb within layouts/application (109.9ms)
+Completed 200 OK in 364ms (Views: 330.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-11-23 11:39:49 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9/MVi4UIQMwh3G9vb+0H17N0q53i/3E4ygzxyK47RFlgCtrW7wZGTt9zarcLm7sG0511DMRG1C7oLYEPZ2OMZA==", "user"=>{"email"=>"faisalprady@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "faisalprady@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "faisalprady@gmail.com"], ["encrypted_password", "$2a$11$nzgSPjWFEPiCorRPkDpEGOGUMO8HWBKnTml9hW34Xxq6TI89pbZpi"], ["created_at", "2017-11-23 10:39:49.985535"], ["updated_at", "2017-11-23 10:39:49.985535"]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", "2017-11-23 10:39:50.005123"], ["last_sign_in_at", "2017-11-23 10:39:50.005123"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["updated_at", "2017-11-23 10:39:50.006876"], ["id", 2]]
+  [1m[35m (18.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 256ms (ActiveRecord: 24.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-23 11:39:50 +0100
+Processing by DocumentsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.8ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 104ms (Views: 95.9ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-11-23 11:44:27 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"HHGTIeXrNzM0HLsLEI7LMoKqINsD33SMSNEVewvExpaxaXss3lIBtFKv2vVtl+NW5pSbnAb1dNh9QdGNXsnisQ=="}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 44ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-23 11:44:27 +0100
+Processing by DocumentsController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-23 11:44:27 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (7.0ms)
+  Rendered users/sessions/new.html.erb within layouts/application (23.4ms)
+Completed 200 OK in 121ms (Views: 118.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-23 11:46:49 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (5.6ms)
+  Rendered users/sessions/new.html.erb within layouts/application (42.4ms)
+Completed 200 OK in 179ms (Views: 159.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-23 11:51:58 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (10.6ms)
+  Rendered users/sessions/new.html.erb within layouts/application (55.8ms)
+Completed 200 OK in 198ms (Views: 181.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-23 11:53:10 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (5.6ms)
+  Rendered users/sessions/new.html.erb within layouts/application (31.4ms)
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/hudaswanditya/Documents/last_semester/Agile/ruby/Agile/DocumentsApp/app/views/layouts/application.html.erb:51: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^
+/Users/hudaswanditya/Documents/last_semester/Agile/ruby/Agile/DocumentsApp/app/views/layouts/application.html.erb:53: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/layouts/application.html.erb:51: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/layouts/application.html.erb:53: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-23 11:53:25 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.6ms)
+  Rendered users/sessions/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 70ms (Views: 68.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-11-23 11:53:40 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n14vMR66ELVStJUvthm44pDyKtBXhTVX5RIcKH4U6bvfLo3rovlOURWGBCoPzdK0Vb079OyENXpEsv+Mpm8JCA==", "user"=>{"email"=>"huda.swanditya@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "huda.swanditya@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2017-11-23 10:53:40.361035"], ["last_sign_in_at", "2017-11-23 10:36:44.167777"], ["sign_in_count", 3], ["updated_at", "2017-11-23 10:53:40.365223"], ["id", 1]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 227ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-23 11:53:40 +0100
+Processing by DocumentsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.8ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 112ms (Views: 104.2ms | ActiveRecord: 1.5ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-11-23 11:54:28 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"bIlQN1rMnoJLrrvqOWB4lZ6LDq1aVJeX3g3dtCEArSr7r0drlmjDz2g6XcUCclJx0Imwo8B4M+PQL7ax3ol0Gg=="}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 52ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-23 11:54:28 +0100
+Processing by DocumentsController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-23 11:54:28 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (4.6ms)
+  Rendered users/sessions/new.html.erb within layouts/application (58.5ms)
+Completed 200 OK in 308ms (Views: 302.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-23 11:56:09 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (6.5ms)
+  Rendered users/sessions/new.html.erb within layouts/application (63.9ms)
+Completed 200 OK in 296ms (Views: 260.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-11-23 11:56:16 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rdTrsfk9FgjMsK/FNd4dH8+ofiK4xx2MWcQUcJR8zh0WpP1+BRKMblSGx8PlAC26yQVcTwT6L929BkUiJsCgrw==", "user"=>{"email"=>"faisalprady@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "faisalprady@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2017-11-23 10:56:16.617534"], ["sign_in_count", 2], ["updated_at", "2017-11-23 10:56:16.620388"], ["id", 2]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 216ms (ActiveRecord: 7.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-23 11:56:16 +0100
+Processing by DocumentsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (18.1ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (26.3ms)
+Completed 200 OK in 175ms (Views: 142.3ms | ActiveRecord: 18.5ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-11-23 11:56:18 +0100
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 210ms (Views: 143.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-11-23 12:03:14 +0100
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (6.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (3.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (26.6ms)
+Completed 200 OK in 180ms (Views: 136.6ms | ActiveRecord: 10.7ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-23 12:03:18 +0100
+Processing by DocumentsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (1.6ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 109ms (Views: 97.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-11-23 12:03:19 +0100
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (4.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 100ms (Views: 83.1ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-23 12:03:20 +0100
+Processing by DocumentsController#index as HTML
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 98ms (Views: 87.2ms | ActiveRecord: 2.7ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-11-23 12:06:50 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"yXYQq25skmnoy8LQgOB0Fnh4mIoMmjn4inD9pTnkiN9fCMNFH2xQsBkIkMrG183xFhIFjqrq/XEfojPttCsNBA=="}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 46ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-23 12:06:50 +0100
+Processing by DocumentsController#index as HTML
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-23 12:06:50 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (4.2ms)
+  Rendered users/sessions/new.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 116ms (Views: 112.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-23 12:09:04 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (5.2ms)
+  Rendered users/sessions/new.html.erb within layouts/application (36.1ms)
+Completed 200 OK in 203ms (Views: 184.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-23 12:13:44 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (3.7ms)
+  Rendered users/sessions/new.html.erb within layouts/application (30.5ms)
+Completed 200 OK in 175ms (Views: 154.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-11-23 12:13:52 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lPzUzFts5beObb6GF7i+805W3ydu+Pp/+q+Jpo3VY0gXqy7rz2YZX+8Pyl7D1OIqM/qOL+SCjQqBnkmfh8fdEA==", "user"=>{"email"=>"faisalprady@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "faisalprady@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2017-11-23 11:13:53.171151"], ["last_sign_in_at", "2017-11-23 10:56:16.617534"], ["sign_in_count", 3], ["updated_at", "2017-11-23 11:13:53.173315"], ["id", 2]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 194ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-23 12:13:53 +0100
+Processing by DocumentsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 57ms (Views: 51.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-23 12:18:59 +0100
+Processing by DocumentsController#index as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.7ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 161ms (Views: 129.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-23 12:19:02 +0100
+Processing by DocumentsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (25.3ms)
+Completed 200 OK in 182ms (Views: 175.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-11-23 12:19:03 +0100
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 118ms (Views: 101.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-23 12:19:04 +0100
+Processing by DocumentsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.7ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 99ms (Views: 88.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-11-23 12:19:05 +0100
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (2.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 119ms (Views: 108.7ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-23 12:19:06 +0100
+Processing by DocumentsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.5ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 209ms (Views: 200.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-11-23 12:19:07 +0100
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 127ms (Views: 118.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-23 12:19:07 +0100
+Processing by DocumentsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 92ms (Views: 84.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-23 12:21:16 +0100
+Processing by DocumentsController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 142ms (Views: 108.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-11-23 12:21:21 +0100
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 92ms (Views: 86.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-23 12:21:22 +0100
+Processing by DocumentsController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.6ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 117ms (Views: 106.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-11-23 12:21:33 +0100
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 170ms (Views: 161.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-23 12:21:34 +0100
+Processing by DocumentsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.9ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 128ms (Views: 120.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-27 12:03:23 +0100
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DocumentsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.5ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 590ms (Views: 532.8ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-27 12:03:29 +0100
+Processing by DocumentsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 120ms (Views: 112.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-11-27 12:03:31 +0100
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 81ms (Views: 58.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-27 12:03:32 +0100
+Processing by DocumentsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 55ms (Views: 46.7ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-11-27 12:03:38 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"cgvjai4rm5bsYkqKzS2uOcGBH2VI4DwakfUEDiD9mobD3WT+VROHVDKlIrPTIXpzbiwMfydas6UtCscnBGXWnQ=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 22ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-27 12:03:38 +0100
+Processing by DocumentsController#index as HTML
+Completed 401 Unauthorized in 11ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-27 12:03:38 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (2.0ms)
+  Rendered users/sessions/new.html.erb within layouts/application (54.9ms)
+Completed 200 OK in 124ms (Views: 120.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-11-27 12:03:46 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Oo8iz0WAnxwf9mtrLbiTVHbPKtqveQM8LPREa4Y07++QzfqhrMyzem7ioDfh7BUHf9SGETBjJq/vukBojjT9UA==", "user"=>{"email"=>"huda.swanditya@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "huda.swanditya@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2017-11-27 11:03:46.912687"], ["last_sign_in_at", "2017-11-23 10:53:40.361035"], ["sign_in_count", 4], ["updated_at", "2017-11-27 11:03:46.914024"], ["id", 1]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 212ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-27 12:03:46 +0100
+Processing by DocumentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 57ms (Views: 52.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-11-27 12:03:56 +0100
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 69ms (Views: 58.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2017-11-27 12:03:58 +0100
+Processing by DocumentsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  Rendered documents/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 57ms (Views: 49.1ms | ActiveRecord: 0.6ms)
+
+
